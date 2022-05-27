@@ -1,6 +1,7 @@
 package io.xrio.basicgraphql;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
  */
 @Entity
 @Data
+@NoArgsConstructor
 public class School {
 
     @Id
@@ -20,4 +22,10 @@ public class School {
     private String name;
     @OneToMany
     private List<Student> students;
+
+
+    public School(String name) {
+        this.name = name;
+    }
+
 }

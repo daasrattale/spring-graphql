@@ -1,0 +1,14 @@
+type Query {
+    students:[Student]
+}
+
+type Student {
+    id: ID!
+    name: String!
+}
+
+type School{
+    id: ID!
+    name: String!
+    students: [Student]
+}

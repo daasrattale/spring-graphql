@@ -1,6 +1,7 @@
 package io.xrio.basicgraphql;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -11,6 +12,7 @@ import javax.persistence.*;
  */
 @Entity
 @Data
+@NoArgsConstructor
 public class Student {
 
     @Id
@@ -23,4 +25,10 @@ public class Student {
     @OneToOne(fetch = FetchType.LAZY)
     private School school;
 
+
+    public Student(String name, String email, School school) {
+        this.name = name;
+        this.email = email;
+        this.school = school;
+    }
 }
