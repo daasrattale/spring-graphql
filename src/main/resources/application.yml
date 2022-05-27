@@ -1,6 +1,9 @@
 spring:
   application:
     name: io-school
+  graphql:
+    graphiql:
+      enabled: true
 
   datasource:
     url: jdbc:h2:file:./data/schoolDB

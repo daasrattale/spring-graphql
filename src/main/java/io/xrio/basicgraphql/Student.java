@@ -22,7 +22,7 @@ public class Student {
     private String email;
 
     // Lazy fetch to avoid having the infinite loop
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     private School school;
 
 

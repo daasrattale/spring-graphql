@@ -1,10 +1,13 @@
 type Query {
     students:[Student]
+    schools:[School]
 }
 
 type Student {
     id: ID!
     name: String!
+    email: String!
+    school: School!
 }
 
 type School{
